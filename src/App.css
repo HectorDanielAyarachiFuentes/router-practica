@@ -47,3 +47,46 @@ body {
   font-size: 24px;
   color: #e44043;
 }
+
+
+/* styles.css */
+.button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '💀'; /* Reemplaza esto con el emoji de calavera de tu elección */
+  position: absolute;
+  opacity: 0;
+  top: 50%;
+  right: -30px; /* Aumentamos el margen derecho para evitar superposición */
+  transform: translateY(-50%);
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 50px; /* Aumentamos el padding derecho para dar espacio a la calavera */
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 10px; /* Ajustamos la posición para que no se superponga */
+}

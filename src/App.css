@@ -25,3 +25,25 @@ button {
 }
 
 /* Agrega más estilos según tus necesidades */
+/* App.css */
+
+/* Estilos generales para toda la aplicación */
+body {
+  background-color: #f5f5f5;
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+}
+
+.pokemon-app {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.pokemon-title {
+  font-size: 24px;
+  color: #e44043;
+}

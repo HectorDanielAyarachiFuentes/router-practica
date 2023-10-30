@@ -1,25 +1,24 @@
-import React, { useState } from 'react';
-import './App.css'; // Importa el archivo CSS aquí
-
+import './App.css';
+import { Routes, Route } from 'react-router-dom';
+import Layout  from "./pages/Layout";
+import About  from "./pages/About";
+import Home  from "./pages/Home";
+import Default  from "./pages/Default";
+import Dashboard  from "./pages/Dashboard";
 function App() {
-  const [count, setCount] = useState(0);
-
-  const incrementCount = () => {
-    setCount(count + 1);
-  };
-
   return (
-    <div className="app-container">
-      <h1 className="heading">Welcome to My Retro React App</h1>
-      <div className="card retro-card">
-        <p className="retro-text">This is a simple React application with a retro web style.</p>
-        <p className="retro-text">Current count: {count}</p>
-        <button onClick={incrementCount} className="retro-button">Increment Count</button>
-        <a href="/another-page" className="retro-link">Go to Another Page</a>
-      </div>
+    <div>
+      <h1>Routes</h1>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+           <Route path="about" element={<About />} />
+           <Route path="/" element={<Home />} />
+           <Route path="dashboard" element={<Dashboard />} />
+           <Route path="*" element={<Default />} />
+        </Route>
+      </Routes>
     </div>
   );
 }
 
 export default App;
-
